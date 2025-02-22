@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Amateur Store BD
 
-## Getting Started
+An E-commerce start-up from some amateur entrepreneurs.
 
-First, run the development server:
+## 📌 Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Amateur Store BD is an online shopping platform being developed as part of a learning journey. The goal is to build a fully functional e-commerce website from scratch.
+
+## 🚀 Tech Stack
+
+This project leverages modern web technologies, including:
+
+- **Next.js v15** - React framework for server-side rendering and static site generation.
+- **React v19** - Core UI library.
+- **TypeScript** - Enhancing code reliability and maintainability.
+- **ESLint** - Ensuring code quality and consistency.
+- **PostgreSQL** - Relational database for efficient data management.
+- **Prisma** - ORM for database interactions.
+- **Zod** - Schema validation for TypeScript.
+- **NextAuth** - Authentication system for user accounts.
+- **React Hook Form** - Managing form validation and state.
+- **PayPal & Stripe API** - Payment gateways for handling transactions.
+- **ShadCN UI** - UI component library.
+- **Tailwind CSS** - Utility-first styling for a modern UI.
+- **Recharts** - Data visualization library.
+- **Uploadthing** - File upload solution.
+- **Jest** - JavaScript testing framework.
+
+## 🔧 Features
+
+- 🛍️ **Product Listing & Filtering**
+- 🔄 **Cart & Checkout System**
+- 🔑 **User Authentication & Authorization**
+- 💳 **Payment Integration (PayPal & Stripe)**
+- 📦 **Order Management**
+- 📸 **Image Upload & Optimization**
+- 📊 **Admin Dashboard for Product & Order Management**
+
+## 📦 Installation & Setup
+
+### Prerequisites
+
+- Node.js 18+
+- PostgreSQL (local or cloud)
+- PayPal & Stripe Account
+- Cloud Storage for Image Uploads
+
+### Steps to Run Locally
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/amateur-store-bd.git
+   cd amateur-store-bd
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+### 3️⃣ Set up environment variables
+
+Create a `.env.local` file in the root of your project and add your credentials:
+
+```env
+DATABASE_URL=postgresql://...
+NEXTAUTH_SECRET=your-secret-key
+STRIPE_SECRET_KEY=your-stripe-key
+PAYPAL_CLIENT_ID=your-paypal-client-id
+PAYPAL_SECRET=your-paypal-secret
+UPLOADTHING_SECRET=your-uploadthing-secret
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4️⃣ Run database migrations
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run the following command to apply database migrations:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npx prisma migrate dev --name init
+```
 
-## Learn More
+### 5️⃣ Start the development server
 
-To learn more about Next.js, take a look at the following resources:
+Run the following command to start the local development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+npm run dev
+```
